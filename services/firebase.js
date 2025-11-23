@@ -1,4 +1,3 @@
-// services/firebase.js
 const admin = require("firebase-admin");
 require("dotenv").config();
 
@@ -20,5 +19,10 @@ admin.initializeApp({
 });
 
 const bucket = admin.storage().bucket();
-
+bucket
+  .getMetadata()
+  .then(() => console.log("Firebase Storage connected successfully"))
+  .catch((err) =>
+    console.error("Firebase Storage connection failed:", err.message)
+  );
 module.exports = { admin, bucket };
