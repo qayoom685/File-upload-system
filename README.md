@@ -1,1 +1,2 @@
 # File-upload-system
+The File Upload System enables interns to securely upload resumes and project files through a streamlined backend service. Using Node.js, Multer, and Firebase Storage, the system validates file types and sizes before storing them safely in the cloud. It ensures efficient document management, secure storage, and an easy submission process for interns.
